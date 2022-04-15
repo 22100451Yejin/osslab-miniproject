@@ -6,10 +6,23 @@ int main(void){
     Product p[100];
     int count, menu, index; 
 
+    FILE *file;
+
 #ifdef DEBUG
    printf("DEBUG MODE!\n");
 #endif
     
+ if ((file = fopen("product.txt", "r")))
+    {
+      fclose(file);
+      count=loadData(p);
+      index=count;;
+      printf("=>로딩완료");
+    }
+    else{
+        printf("=>내용 없음\n");
+    }
+
     while (1){
         
         menu = smenu();
