@@ -87,3 +87,19 @@ int loadData(Product *p){
     return i;
 
 } //FILE에서 데이터를 불러오는 함수
+
+
+void searchWeight(Product *p, int count){
+    int search;
+    printf("검색할 제품의 중량을 입력하세요: ");
+    scanf("%d",&search);
+
+    for(int i=0;i<count;i++){
+        if(p[i].weight == search){
+            readProduct(p[i]);
+        }
+    }
+} //제품 중량을 검색하는 함수
+
+
+
