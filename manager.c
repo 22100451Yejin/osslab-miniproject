@@ -67,4 +67,23 @@ void saveData(Product *p, int count){
     }
 
     fclose(fp);
+} //FILE에서 데이터를 저장하는 함수
+
+int loadData(Product *p){
+    FILE *fp;
+    fp=fopen("product.txt","rt");
+    int i;
+
+    for(i=0;i<100;i++){
+        fscanf(fp," %[^\ns]",p[i].name);
+        if(feof(fp)) break;
+        fscanf(fp," %[^\ns]",p[i].explain);
+        fscanf(fp,"%s",&p[i].weight);
+        fscanf(fp,"%d",&p[i].price);
+        fscanf(fp,"%d",&p[i].delivery);
+    }
+
+    fclose(fp);
+    return i;
+
 } //FILE에서 데이터를 불러오는 함수
