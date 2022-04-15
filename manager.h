@@ -9,3 +9,4 @@ void searchprice(Product *p, int count); //제품 가격을 검색하는 함수
 void searchdelivery(Product *p, int count); //제품 배송 방법을 검색하는 함수
 void saveData(Product *p, int count); //FILE에서 데이터를 저장하는 함수
 int loadData(Product *p); //FILE에 불러오는 함수
+void searchWeight(Product *p, int count)//중량 검색하는 함수
