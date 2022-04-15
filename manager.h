@@ -7,5 +7,5 @@ int listProduct(Product *p, int count); //전체 등록된 제품 리스트를 �
 void searchname(Product *p, int count); //제품 이름을 검색하는 함수
 void searchprice(Product *p, int count); //제품 가격을 검색하는 함수
 void searchdelivery(Product *p, int count); //제품 배송 방법을 검색하는 함수
-void saveData(Product *p, int count); //FILE에서 데이터를 불러오는 함수
-
+void saveData(Product *p, int count); //FILE에서 데이터를 저장하는 함수
+int loadData(Product *p); //FILE에 불러오는 함수
