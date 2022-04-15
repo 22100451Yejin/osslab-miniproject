@@ -67,6 +67,10 @@ printf("\nDEBUG! 전체 갯수: %d\n",count);
 		saveData(p,index);
 	}
 
+	else if (menu == 8){
+		searchWeight(p,index);
+	}
+
     }
       return 0;
 }
